@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: india-crago-backend
+    env: node
+    plan: free
+    repo: https://github.com/samirsk03/india-crago-backend
+    branch: main
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://mujeebshaikh7797:4yadINSSMYdeqdCp@cluster0.drcxmwa.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      - key: PORT
+        value: 5000
+    healthCheckPath: /
